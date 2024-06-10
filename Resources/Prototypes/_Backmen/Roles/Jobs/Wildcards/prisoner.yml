@@ -1,0 +1,26 @@
+﻿- type: job
+  id: Prisoner
+  name: "Заключеннный (ПРОЧИТАЙТЕ ПРАВИЛА)"
+  description: job-description-prisoner
+  playTimeTracker: JobPrisoner
+  startingGear: PrisonerGear
+  alwaysUseSpawner: true
+  canBeAntag: false
+  whitelisted: true
+  icon: JobIconPrisoner
+  supervisors: job-supervisors-security
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 36000
+  special:
+    - !type:AddImplantSpecial
+      implants: [ TrackingImplant ]
+
+- type: startingGear
+  id: PrisonerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPrisoner
+    shoes: ClothingShoesColorBlack
+    id: PrisonerPDA
+    ears: ClothingHeadsetGrey
+  #innerClothingSkirt: ClothingUniformJumpsuitPrisoner
