@@ -1,0 +1,45 @@
+﻿- type: reagent
+  id: Aphrodisiac
+  name: Афродизиак.
+  group: Narcotics
+  desc: вещество стимулирующее или усиливающие половое влечение или половую активность.
+  flavor: sublime
+  color: "#804030"
+  physicalDesc: reagent-physical-desc-energizing
+  metabolisms:
+    Narcotic:
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+        - "Ваше возбуждение растет..."
+        - "Вы хотите сделать это с любым существом прямо сейчас!"
+        - "Ваша голова кружится..."
+        probability: 0.6
+        conditions:
+        - !type:ReagentThreshold
+          max: 50
+      - !type:GenericStatusEffect
+         key: SeeingRainbows
+         component: SeeingRainbows
+         type: Add
+         time: 5
+         refresh: false
+- type: reaction
+  id: Aphrodesiac
+  impact: Medium
+  reactants:
+    Sugar:
+      amount: 1
+    SpaceDrugs:
+      amount: 1
+    Lithium:
+      amount: 1
+    Plasma:
+      amount: 1
+      catalyst: true
+  products:
+    Aphrodisiac: 5
+    Ephedrine: 0.1
+# месажи и вся хуйня в файле customLocale.ftl
