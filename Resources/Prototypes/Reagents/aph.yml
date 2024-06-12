@@ -2,7 +2,7 @@
   id: Aphrodisiac
   name: Афродизиак.
   group: Narcotics
-  desc: вещество стимулирующее или усиливающие половое влечение или половую активность.
+  desc: Совращать глав!
   flavor: sublime
   color: "#804030"
   physicalDesc: reagent-physical-desc-energizing
@@ -44,8 +44,8 @@
     Ephedrine: 0.1
 - type: entity
   id: AphrodisiacChemistryBottle
-  name: nocturine bottle
-  description: This will make someone fall down almost immediately. Hard to overdose on.
+  name: Бутылочка Афродизиака
+  description: Поможет вам совратить любого человека!
   parent: BaseChemistryBottleFilled
   components:
   - type: SolutionContainerManager
@@ -57,8 +57,8 @@
           Quantity: 50
 - type: listing
   id: UplinkAPhodisiacChemistryBottle
-  name: Бутылочка Афродизиака
-  description: Вещество которое поможет вам совратить любую главу!
+  name: "Бутылочка Афродизиака"
+  description: "Вещество которое поможет совратить любую главу!"
   productEntity: AphrodisiacChemistryBottle
   cost:
     Telecrystal: 2
