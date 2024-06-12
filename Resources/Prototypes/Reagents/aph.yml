@@ -1,4 +1,4 @@
-﻿- type: reagent
+- type: reagent
   id: Aphrodisiac
   name: Афродизиак.
   group: Narcotics
@@ -27,7 +27,7 @@
          time: 5
          refresh: false
 - type: reaction
-  id: Aphrodesiac
+  id: Aphrodisiac
   impact: Medium
   reactants:
     Sugar:
@@ -42,4 +42,25 @@
   products:
     Aphrodisiac: 5
     Ephedrine: 0.1
-# месажи и вся хуйня в файле customLocale.ftl
+- type: entity
+  id: AphrodisiacChemistryBottle
+  name: nocturine bottle
+  description: This will make someone fall down almost immediately. Hard to overdose on.
+  parent: BaseChemistryBottleFilled
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: Aphrodisiac
+          Quantity: 50
+- type: listing
+  id: UplinkAPhodisiacChemistryBottle
+  name: Бутылочка Афродизиака
+  description: Вещество которое поможет вам совратить любую главу!
+  productEntity: AphrodisiacChemistryBottle
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkChemicals
