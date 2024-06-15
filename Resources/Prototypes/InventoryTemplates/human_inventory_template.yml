@@ -121,3 +121,10 @@
       uiWindowPos: 3,0
       strippingWindowPos: 0,5
       displayName: Back
+   - name: anal
+      slotTexture: anal
+      slotFlags: ANAL
+      stripTime: 4
+      uiWindowPos: 5,1
+      strippingWindowPos: 5,1
+      displayName: anal
