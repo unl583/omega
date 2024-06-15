@@ -27,6 +27,7 @@
       sprite: Mobs/Customization/masking_helpers.rsi
       state: unisex_full
       visible: false
+    - map: ["anal"]
     - map: ["jumpsuit"]
     - map: ["enum.HumanoidVisualLayers.LFoot"]
     - map: ["enum.HumanoidVisualLayers.RFoot"]
@@ -337,6 +338,7 @@
       sprite: Objects/Misc/handcuffs.rsi
       state: body-overlay-2
       visible: false
+    - map: ["anal"]
     - map: [ "gloves" ]
     - map: [ "shoes" ]
     - map: [ "ears" ]
