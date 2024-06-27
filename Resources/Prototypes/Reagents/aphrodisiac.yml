@@ -1,0 +1,66 @@
+﻿- type: reagent
+  id: Aphrodisiac
+  name: Афродизиак.
+  group: Narcotics
+  desc: Совращать глав!
+  flavor: sublime
+  color: "#804030"
+  physicalDesc: reagent-physical-desc-energizing
+  metabolisms:
+    Narcotic:
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+        - "Ваше возбуждение растет..."
+        - "Вы хотите сделать это с любым существом прямо сейчас!"
+        - "Ваша голова кружится..."
+        probability: 0.6
+        conditions:
+        - !type:ReagentThreshold
+          max: 50
+      - !type:GenericStatusEffect
+         key: SeeingRainbows
+         component: SeeingRainbows
+         type: Add
+         time: 5
+         refresh: false
+- type: reaction
+  id: Aphrodisiac
+  impact: Medium
+  reactants:
+    Sugar:
+      amount: 1
+    SpaceDrugs:
+      amount: 1
+    Lithium:
+      amount: 1
+    Plasma:
+      amount: 1
+      catalyst: true
+  products:
+    Aphrodisiac: 5
+    Ephedrine: 0.1
+- type: entity
+  id: AphrodisiacChemistryBottle
+  name: Бутылочка Афродизиака
+  description: Поможет вам совратить любого человека!
+  parent: BaseChemistryBottleFilled
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: Aphrodisiac
+          Quantity: 50
+- type: listing
+  id: UplinkAPhodisiacChemistryBottle
+  name: "Бутылочка Афродизиака"
+  description: "Вещество которое поможет совратить любую главу!"
+  productEntity: AphrodisiacChemistryBottle
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkChemicals
