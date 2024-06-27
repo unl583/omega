@@ -1,0 +1,51 @@
+- type: job
+  id: ResearchDirector
+  name: job-name-rd
+  description: job-description-rd
+  playTimeTracker: JobResearchDirector
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 5400 #15 hrs # Corvax-RoleTime
+#    - !type:OverallPlaytimeRequirement
+#      time: 144000 #40 hrs
+  weight: 10
+  startingGear: ResearchDirectorGear
+  icon: "JobIconResearchDirector"
+  requireAdminNotify: true
+  supervisors: job-supervisors-captain
+  canBeAntag: true
+  access:
+  - Research
+  - Command
+  - Maintenance
+  - ResearchDirector
+  - Brig
+  - Cryogenics
+  #start-backmen: currency
+  minBankBalance: 400
+  maxBankBalance: 600
+  wageDepartment: Command
+  wage: 100
+  #end-backmen: currency
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: PsionicBonusChance
+        multiplier: 3
+      - type: NpcFactionMember
+        factions:
+          - CentralCommand
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: ResearchDirectorGear
+  equipment:
+    id: RnDPDA
+    ears: ClothingHeadsetRD
+  storage:
+    back:
+    - BoxSurvival
+    - Flash
