@@ -1,0 +1,73 @@
+- type: job
+  id: SAI
+  name: job-name-sai
+  description: job-description-sai
+  playTimeTracker: JobSAI
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 1440
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 1440
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 1440
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 1440
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 1440
+    - !type:RoleTimeRequirement
+      role: JobBorg
+      time: 2160
+    - !type:OverallPlaytimeRequirement
+      time: 10000
+  weight: 30
+  icon: JobIconStationAI
+  supervisors: "all crew"
+  accessGroups:
+    - AllAccess
+  canBeAntag: false
+  jobEntity: AICore
+  startingGear: RobotGear # for char preview only
+  alwaysUseSpawner: true
+  #canHaveTraits: false
+  joinNotifyCrew: true
+  #whitelistRequired: true
+
+- type: job
+  id: SAIShip
+  name: "Искутсвенный Интелект шаттла."
+  description: "Искуственный Интелект шаттла,предназначен для режима бои флотов."
+  playTimeTracker: JobSAIShip
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 86400
+  weight: 30
+  icon: JobIconStationAI
+  supervisors: "all crew"
+  accessGroups:
+  - AllAccess
+  canBeAntag: false
+  jobEntity: AICoreShip
+  startingGear: RobotGear # for char preview only
+  alwaysUseSpawner: true
+  #canHaveTraits: false
+  joinNotifyCrew: true
+
+# - type: startingGear
+#   id: AIGear
+#   equipment:
+#     id: AIPDA
+#   inhand:
+#     hand 1: AIPDA
+#     hand 2: DoorRemoteAI
+# - type: startingGear
+#   id: AIGearUnremoveable
+#   equipment:
+#     id: AIPDAur
+#   inhand:
+#     hand 1: AIPDAur
+#     hand 2: DoorRemoteAIur
