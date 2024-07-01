@@ -9,7 +9,7 @@
 #      time: 21600 #6 hrs
     - !type:RoleTimeRequirement
       role: JobSalvageSpecialist
-      time: 1500 #10 hrs # Corvax-RoleTime
+      time: 9000 #10 hrs # Corvax-RoleTime
     - !type:DepartmentTimeRequirement
       department: Cargo
       time: 1000 #15 hrs # Corvax-RoleTime
